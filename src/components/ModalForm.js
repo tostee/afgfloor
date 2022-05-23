@@ -34,7 +34,7 @@ const showmodal = () =>{
 */
 
 return (
-    <div>
+    <div className="mt-1">
 <button onClick={()=>showmodal()} className={`block ${className}`} type="button" data-modal-toggle="authentication-modal">
   {name}
 </button>

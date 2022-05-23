@@ -4,7 +4,7 @@ import ModalForm from "./ModalForm";
 const Header = () => {
 	return (
 		<div
-				className={`border-green-600 border-y-2 h-96 bg-blend-darken bg-zinc-400 grid place-items-center relative overflow-hidden bg-no-repeat bg-cover`}
+				className={`h-96 bg-blend-darken bg-zinc-400 grid place-items-center relative overflow-hidden bg-no-repeat bg-cover`}
 			 style={{backgroundImage:"url(/assets/images/default.jpeg)"}}>
 				<div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
     >

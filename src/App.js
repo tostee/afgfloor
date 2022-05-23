@@ -8,8 +8,7 @@ import Contactus from "./components/Contactus";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 
-
-import 'flowbite';
+import "flowbite";
 import "./index.css";
 import Navbar from "./components/navbar";
 import ModalForm from "./components/ModalForm";
@@ -27,7 +26,7 @@ const App = () => {
 							<Route path="/contact" element={<Contactus />}></Route>
 							<Route path="/about" element={<About />}></Route>
 						</Routes>
-						<ModalForm/>
+						<ModalForm />
 						<Footer />
 					</BrowserRouter>
 				</div>

@@ -5,14 +5,11 @@ import Notfound from "./Notfound";
 import Header from "./Header";
 import Teammates from "./Teammates";
 
-
 const Home = (className) => {
 	return (
 		<div className="grid gap-3 auto-rows-auto ">
-			<Header/>
-			<div
-				className={` bg-transparent mt-10 place-items-center ${className}`}
-			>
+			<Header />
+			<div className={` bg-transparent mt-10 place-items-center ${className}`}>
 				<Lastworks />
 			</div>
 			<div

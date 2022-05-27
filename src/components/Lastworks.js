@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const Lastworks = () => {
 	return (
-		<div className="lg:px-20 md:px-6 px-4 md:py-12 py-8 bg-white">
-			<div className="lg:flex items-center justify-between">
+		<div className="lg:px-20 md:px-6 px-4 md:py-12 py-8 bg-white ">
+			<div className="lg:flex items-center justify-between w-full max-w-[1024px] flex gap-4 container flex-wrap mx-auto">
 				<div className="lg:w-1/3">
-					<h1 className="text-4xl font-semibold leading-9 text-gray-800">
+					<h1 className="text-3xl xl:text-6xl font-semibold leading-none text-primary">
 						Indoor Interiors
 					</h1>
-					<p className="text-base leading-6 mt-4 text-gray-600">
+					<p className="text-xl leading-6 mt-4 text-primary">
 						Get inspired by our curated selection of luxiwood interiors. We hope
 						get inspired to have luxiwood interior yourself. You’ll find tips
 						here where you can buy a lot of cool furniture.
@@ -17,7 +17,7 @@ const Lastworks = () => {
 					<Link to="/gallery">
 						<button
 							aria-label="view catalogue"
-							className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 focus:outline-none mt-6 md:mt-8 text-base font-semibold leading-none text-gray-800 flex items-center hover:underline"
+							className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 focus:outline-none mt-6 md:mt-8 text-xl font-semibold leading-none text-primary flex items-center hover:underline"
 						>
 							View Catalogue
 							<svg

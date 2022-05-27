@@ -1,14 +1,17 @@
 const Footer = (props) => {
 	return (
-		<footer className="p-4 sm:p-6 dark:bg-gray-800">
-			<div className="sm:flex sm:items-center sm:justify-between">
-				<span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-					© 2022 <span>Tostee™</span>. All Rights Reserved.
-				</span>
+		<footer className="flex justify-betweenp-4 sm:p-6 bg-primarydark">
+			<div className="w-full max-w-[1024px] flex gap-4 container flex-wrap justify-between items-center mx-auto sm:flex sm:items-center sm:justify-between">
+				<div>
+					<span className="text-sm sm:text-center text-white">
+						© 2022 <span>Tostee™</span>. All Rights Reserved.
+					</span>
+				</div>
+
 				<div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
 					<a
-						href="#"
-						className="text-gray-500 hover:text-gray-300 dark:hover:text-white"
+						href="http://www.insta.com"
+						className="text-gray-100  hover:text-white"
 					>
 						<svg
 							className="w-5 h-5"
@@ -23,10 +26,7 @@ const Footer = (props) => {
 							/>
 						</svg>
 					</a>
-					<a
-						href="#"
-						className="text-gray-500 hover:text-gray-300 dark:hover:text-white"
-					>
+					<a href="#" className="text-gray-100  hover:text-white">
 						<svg
 							className="w-5 h-5"
 							fill="currentColor"
@@ -40,10 +40,7 @@ const Footer = (props) => {
 							/>
 						</svg>
 					</a>
-					<a
-						href="#"
-						className="text-gray-500 hover:text-gray-300 dark:hover:text-white"
-					>
+					<a href="#" className="text-gray-100  hover:text-white">
 						<svg
 							className="w-5 h-5"
 							fill="currentColor"

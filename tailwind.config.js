@@ -1,13 +1,24 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/flowbite/**/*.js"],
-  theme: {
-    extend: {
-      fontFamily: {
-       quicksand: ["Quicksand", "cursive"],
-      },
-      
-  },
-  plugins: [
-    require('flowbite/plugin')
-  ],
-}};
+	content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/flowbite/**/*.js"],
+	theme: {
+		extend: {
+			fontFamily: {
+				quicksand: ["Quicksand", "cursive"],
+			},
+			spacing: {
+				navbar: "56px",
+			},
+			colors: {
+				primary: "#776347",
+				primarylight: "#a79073",
+				primarydark: "#4a391f",
+				secundary: "#475b77",
+				analogous: "#774b47",
+				analogous1: "#737747",
+				triadic: "#5b7747",
+				triadic1: "#477763",
+			},
+		},
+		plugins: [require("flowbite/plugin")],
+	},
+};

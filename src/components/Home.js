@@ -4,28 +4,26 @@ import MyComponent from "./map.component";
 import Notfound from "./Notfound";
 import Header from "./Header";
 import Teammates from "./Teammates";
+import MapComponent from "./map.component";
 
 const Home = (className) => {
 	return (
-		<div className="grid gap-3 auto-rows-auto ">
+		<div className="grid auto-rows-auto auto">
 			<Header />
-			<div className={` bg-transparent mt-10 place-items-center ${className}`}>
+			<div className={`bg-transparent place-items-center ${className}`}>
 				<Lastworks />
 			</div>
+
+			<Testimonials />
+
+			<Teammates />
+
 			<div
-				className={`min-w-[64px] min-h-[64px] bg-zinc-400 mt-10 grid place-items-center ${className}`}
+				className={`min-w-[64px] min-h-[64px] grid place-items-center py-14 px-4 bg-gray-300 ${className}`}
 			>
-				<Testimonials />
-			</div>
-			<div
-				className={`min-w-[64px] min-h-[64px] bg-transparent mt-10 grid place-items-center ${className}`}
-			>
-				<Teammates />
-			</div>
-			<div
-				className={`min-w-[64px] min-h-[64px] bg-transparent mt-10 grid place-items-center ${className}`}
-			>
-				<MyComponent />
+				<div className="w-full max-w-[1024px] rounded overflow-hidden">
+					<MapComponent />
+				</div>
 			</div>
 		</div>
 	);

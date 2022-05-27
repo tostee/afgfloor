@@ -14,7 +14,7 @@ const MapComponent = () => {
 				lng: -79.821091,
 			},
 			label: { color: "white", text: "P1" },
-			draggable: true,
+			draggable: false,
 		},
 	];
 
@@ -22,7 +22,7 @@ const MapComponent = () => {
 	const [markers, setMarkers] = useState(initialMarkers);
 
 	const containerStyle = {
-		width: "50%",
+		width: "100%",
 		height: "400px",
 	};
 

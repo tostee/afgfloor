@@ -4,7 +4,7 @@ const ModalForm = ({ className, name }) => {
 	// options with default values
 	const options = {
 		placement: "bottom-right",
-		backdropClasses: "bg-gray-900 bg-opacity-80 fixed inset-0 z-40",
+		backdropClasses: "bg-gray-900 bg-opacity-80 fixed inset-0",
 		onHide: () => {
 			console.log("modal is hidden");
 		},
@@ -22,10 +22,10 @@ const ModalForm = ({ className, name }) => {
 	};
 
 	const showmodal = () => {
-		console.log("dentro del modal");
 		const modal = new Modal(targetEl, options);
 		modal.show();
 	};
+
 	/*
 	 * targetEl: required
 	 * options: optional
@@ -35,7 +35,7 @@ const ModalForm = ({ className, name }) => {
 		<div className="mt-1">
 			<button
 				onClick={() => showmodal()}
-				className={`block ${className}`}
+				className={`${className}`}
 				type="button"
 				data-modal-toggle="authentication-modal"
 			>
@@ -48,11 +48,11 @@ const ModalForm = ({ className, name }) => {
 				aria-hidden="true"
 				className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full"
 			>
-				<div class="relative p-4 w-full max-w-md h-full md:h-auto">
-					<div className="relative rounded-lg shadow bg-gray-700">
+				<div className="relative p-4 w-full max-w-md h-full md:h-auto">
+					<div className="relative rounded-lg shadow bg-gray-100">
 						<button
 							type="button"
-							className="absolute top-3 right-2.5 text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
+							className="absolute top-3 right-2.5 text-primary bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white"
 							data-modal-toggle="authentication-modal"
 						>
 							<svg
@@ -69,14 +69,14 @@ const ModalForm = ({ className, name }) => {
 							</svg>
 						</button>
 						<div className="py-6 px-6 lg:px-8">
-							<h3 className="mb-4 text-xl font-medium  text-white">
+							<h3 className="mb-4 text-xl font-medium  text-primary">
 								Get quote
 							</h3>
 							<form className="space-y-6" action="#">
 								<div>
 									<label
 										for="name"
-										className="block mb-1 text-sm font-medium text-gray-300"
+										className="block mb-1 text-sm font-medium text-primary"
 									>
 										Your Name
 									</label>
@@ -84,7 +84,7 @@ const ModalForm = ({ className, name }) => {
 										type="text"
 										name="name"
 										id="name"
-										className=" border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+										className=" border text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 bg-gray-600 border-primary placeholder-gray-400 text-primary outline-none"
 										placeholder="Name"
 										required
 									/>
@@ -92,7 +92,7 @@ const ModalForm = ({ className, name }) => {
 								<div>
 									<label
 										for="name"
-										className="block mb-1 text-sm font-medium text-gray-300"
+										className="block mb-1 text-sm font-medium text-primary"
 									>
 										Phone Number
 									</label>
@@ -100,7 +100,9 @@ const ModalForm = ({ className, name }) => {
 										type="phone"
 										name="phone"
 										id="phone"
-										className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+										className="border text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-primary resize-none
+									    outline-none
+                        				"
 										placeholder="Phone number"
 										required
 									/>
@@ -108,7 +110,7 @@ const ModalForm = ({ className, name }) => {
 								<div>
 									<label
 										for="email"
-										className="block mb-1 text-sm font-medium text-gray-300"
+										className="block mb-1 text-sm font-medium text-primary"
 									>
 										Your email
 									</label>
@@ -116,7 +118,7 @@ const ModalForm = ({ className, name }) => {
 										type="email"
 										name="email"
 										id="email"
-										className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
+										className="border text-sm outline-none rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-primary"
 										placeholder="name@company.com"
 										required
 									/>
@@ -125,7 +127,7 @@ const ModalForm = ({ className, name }) => {
 								<div>
 									<label
 										for="email"
-										className="block mb-1 text-sm font-medium text-gray-300 "
+										className="block mb-1 text-sm font-medium text-primary "
 									>
 										How can we help you?
 									</label>
@@ -134,23 +136,25 @@ const ModalForm = ({ className, name }) => {
 										placeholder="I was wondering about availability and rates. I need help whith the following:"
 										className="
                         w-full
-                        rounded
                         py-3
                         px-[14px]
-                        text-white
+                        text-primary
                         border border-[f0f0f0]
                         resize-none
                         outline-none
                         focus-visible:shadow-none
-                        focus:border-primary
                         bg-gray-600
+						rounded-lg
+						focus:ring-primary
+						focus:border-primary
                         "
 									></textarea>
 								</div>
+
 								<div className="grid grid-cols-5">
 									<button
 										type="submit"
-										className="col-start-4 col-span-2 w-auto text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+										className="col-start-4 col-span-2 w-auto text-primary focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-secundary hover:bg-secundary focus:ring-secundary"
 									>
 										Send Message
 									</button>

@@ -6,13 +6,12 @@ import Header from "./Header";
 import Teammates from "./Teammates";
 import MapComponent from "./map.component";
 
-const Home = (className) => {
+const Home = ({ className, onChange }) => {
 	return (
 		<div className="grid auto-rows-auto auto">
-			<Header />
-			<div className={`bg-transparent place-items-center ${className}`}>
-				<Lastworks />
-			</div>
+			<Header onChange={onChange} />
+
+			<Lastworks />
 
 			<Testimonials />
 

@@ -1,77 +1,20 @@
-import React, { useState } from "react";
-import {
-	GoogleMap,
-	InfoWindow,
-	LoadScript,
-	Marker,
-} from "@react-google-maps/api";
 
 const MapComponent = () => {
-	const initialMarkers = [
-		{
-			position: {
-				lat: 28.625485,
-				lng: -79.821091,
-			},
-			label: { color: "white", text: "P1" },
-			draggable: false,
-		},
-	];
-
-	const [activeInfoWindow, setActiveInfoWindow] = useState("");
-	const [markers, setMarkers] = useState(initialMarkers);
-
-	const containerStyle = {
-		width: "100%",
-		height: "400px",
-	};
-
-	const center = {
-		lat: 28.626137,
-		lng: 79.821603,
-	};
-
-	const mapClicked = (event) => {
-		console.log(event.latLng.lat(), event.latLng.lng());
-	};
-
-	const markerClicked = (marker, index) => {
-		setActiveInfoWindow(index);
-		console.log(marker, index);
-	};
-
-	const markerDragEnd = (marker, index) => {
-		console.log(marker, index);
-	};
+	
 
 	return (
-		<LoadScript googleMapsApiKey="AIzaSyDBYhLwsDd0C7GVG08e7zNj8eeCvm3vxdQ">
-			<GoogleMap
-				mapContainerStyle={containerStyle}
-				center={center}
-				zoom={10}
-				onClick={mapClicked}
-			>
-				{markers.map((marker, index) => (
-					<Marker
-						key={index}
-						position={marker.position}
-						label={marker.label}
-						draggable={marker.draggable}
-						onDragEnd={(event) => markerDragEnd(marker, index)}
-						onClick={(event) => markerClicked(marker, index)}
-					>
-						{activeInfoWindow === index && (
-							<InfoWindow position={marker.position}>
-								<b>
-									{marker.position.lat}, {marker.position.lng}
-								</b>
-							</InfoWindow>
-						)}
-					</Marker>
-				))}
-			</GoogleMap>
-		</LoadScript>
+		<div className="rounded-lg overflow-hidden w-full h-[420px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14371.711070249705!2d-80.3160661!3d25.7729493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc5338a2e179413a6!2sAFG%20Floor%20Experts!5e0!3m2!1ses-419!2scu!4v1658008167269!5m2!1ses-419!2scu"
+                        width="100%"
+                        height="100%"
+                        loading="lazy"
+                        allowFullScreen
+                        style={{ border: 0 }}
+                        referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+		
 	);
 };
 

@@ -2,9 +2,8 @@ const Teammates = () => {
 	const teams = [
 		{
 			key: 1,
-			imageUrl:
-				"https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
-			name: "John Doe",
+			imageUrl: "/assets/images/team/1.png",
+			name: "Raciel Mendoza",
 			job: "asjdjasdja jasdasdj jasdasd",
 			info: "holaaaaaa",
 			github: "",
@@ -13,9 +12,8 @@ const Teammates = () => {
 		},
 		{
 			key: 2,
-			imageUrl:
-				"https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
-			name: "John Doe",
+			imageUrl: "/assets/images/team/2.png",
+			name: "Alejandro Filgueiras",
 			job: "asjdjasdja jasdasdj jasdasd",
 			info: "holaaaaaa",
 			github: "",
@@ -24,9 +22,8 @@ const Teammates = () => {
 		},
 		{
 			key: 3,
-			imageUrl:
-				"https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
-			name: "John Doe",
+			imageUrl: "/assets/images/team/3.png",
+			name: "René Filgueiras",
 			job: "asjdjasdja jasdasdj jasdasd",
 			info: "holaaaaaa",
 			github: "",
@@ -35,31 +32,8 @@ const Teammates = () => {
 		},
 		{
 			key: 4,
-			imageUrl:
-				"https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
-			name: "John Doe",
-			job: "asjdjasdja jasdasdj jasdasd",
-			info: "holaaaaaa",
-			github: "",
-			twitter: "",
-			instagram: "",
-		},
-		{
-			key: 5,
-			imageUrl:
-				"https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
-			name: "John Doe",
-			job: "asjdjasdja jasdasdj jasdasd",
-			info: "Au comme figements cieux haleurs juillets taches, océans zones des pommes voulu vos le. Inouies azurs taché je et. Aux.",
-			github: "",
-			twitter: "",
-			instagram: "",
-		},
-		{
-			key: 6,
-			imageUrl:
-				"https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
-			name: "John Doe",
+			imageUrl: "/assets/images/team/4.png",
+			name: "Adrián Filgueiras",
 			job: "asjdjasdja jasdasdj jasdasd",
 			info: "holaaaaaa",
 			github: "",
@@ -79,11 +53,11 @@ const Teammates = () => {
 					/>
 				</div>
 				<div className="rounded overflow-hidden shadow-md bg-gray-100 pt-16 px-6 w-full flex flex-col items-center">
-					<div className=" text-primary font-bold text-3xl text-center pb-1">
+					<div className=" text-secundary font-bold text-3xl text-center pb-1">
 						{user.name}
 					</div>
-					<p className="text-primary text-xl text-center">{user.job}</p>
-					<p className="text-center text-primary pt-3 font-normal">
+					<p className="text-secundary text-xl text-center">{user.job}</p>
+					<p className="text-center text-secundary pt-3 font-normal">
 						{user.info}
 					</p>
 					<div className="w-full flex justify-center pt-5 pb-5">
@@ -153,12 +127,12 @@ const Teammates = () => {
 			<div className="w-full max-w-[1024px] flex flex-col gap-6">
 				<div className="w-full max-w-[1024px] flex gap-4 container flex-wrap justify-between items-center mx-auto">
 					<div>
-						<h1 className="lg:text-6xl text-3xl text-center text-primary font-extrabold pb-6 mx-auto">
+						<h1 className="lg:text-6xl text-3xl text-center text-secundary font-extrabold pb-6 mx-auto">
 							The Talented People Behind the Scenes of the Organization
 						</h1>
 					</div>
 				</div>
-				<div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-x-6 gap-y-12">
+				<div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-x-6 gap-y-12">
 					{teams.map((t) => (
 						<TeamCard key={t.key} user={t} />
 					))}

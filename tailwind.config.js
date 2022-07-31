@@ -17,6 +17,8 @@ module.exports = {
 				analogous1: "#737747",
 				triadic: "#5b7747",
 				triadic1: "#477763",
+				links: "#1d49d8",
+				button: "#104c91",
 			},
 		},
 		plugins: [require("flowbite/plugin")],

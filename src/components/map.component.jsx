@@ -12,6 +12,7 @@ const MapComponent = () => {
                         allowFullScreen
                         style={{ border: 0 }}
                         referrerPolicy="no-referrer-when-downgrade"
+                        title="bussines"
                     ></iframe>
                 </div>
 		

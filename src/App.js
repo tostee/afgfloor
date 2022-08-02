@@ -19,7 +19,7 @@ const App = () => {
 				visible={showModal}
 				onChange={(toggle) => setShowModal(toggle)}
 			/>
-			<div className="flex flex-col font-quicksand text-amber-700 bg-white min-h-screen">
+			<div className="flex flex-col font-quicksand bg-white min-h-screen">
 				<Navbar onChange={(toggle) => setShowModal(toggle)} />
 				<div className="flex flex-col gap-4 w-full flex-1">
 					<Routes>

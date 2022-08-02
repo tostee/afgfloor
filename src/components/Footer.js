@@ -8,7 +8,7 @@ const Footer = (props) => {
 					viewBox="0 0 24 24"
 					aria-hidden="true"
 				>
-					<path fill-rule="evenodd" d={dPath} clip-rule="evenodd" />
+					<path fillRule="evenodd" d={dPath} clipRule="evenodd" />
 				</svg>
 			</a>
 		);

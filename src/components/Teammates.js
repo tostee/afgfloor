@@ -61,7 +61,7 @@ const Teammates = () => {
 						{user.info}
 					</p>
 					<div className="w-full flex justify-center pt-5 pb-5">
-						<a href="javascript:void(0)" className="mx-5">
+						<a href="#" className="mx-5">
 							<div>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ const Teammates = () => {
 								</svg>
 							</div>
 						</a>
-						<a href="javascript:void(0)" className="mx-5">
+						<a href="#" className="mx-5">
 							<div>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ const Teammates = () => {
 								</svg>
 							</div>
 						</a>
-						<a href="javascript:void(0)" className="mx-5">
+						<a href="#" className="mx-5">
 							<div>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"

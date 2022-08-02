@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ModalForm from "./ModalForm";
 
 const Navbar = ({ onChange }) => {
 	let arr = [true, false, false, false, false];
@@ -105,13 +104,51 @@ const Navbar = ({ onChange }) => {
 						})}
 					</ul>
 				</div>
-				<div className=" flex space-x-5 justify-center items-center pl-2 flex-1">
+				<div className=" flex space-x-1 justify-center items-center pl-2 flex-1">
 					<button
 						onClick={() => onChange(true)}
 						className="focus:outline-none mx-auto hover:bg-indigo-600 bg-button rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm"
 					>
 						Get Quote
 					</button>
+					<a
+						href="sms:+19542748026"
+						className="ml-2  text-button rounded-full p-1 hover:text-indigo-600"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							strokeWidth="2"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+							/>
+						</svg>
+					</a>
+					<a
+						href="tel:+1-954-274-8026"
+						className="ml-2  text-button rounded-full p-1 hover:text-indigo-600"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							strokeWidth="2"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+							/>
+						</svg>
+					</a>
 				</div>
 			</nav>
 			{/* for smaller devcies */}
@@ -125,13 +162,13 @@ const Navbar = ({ onChange }) => {
 							id="s1"
 							className={`${
 								text.length !== 0 ? "" : "hidden"
-							} font-semibold text-sm leading-3`}
+							} font-semibold leading-3`}
 						>
 							{""}
 						</span>
 						<p
 							id="textClicked"
-							className="font-normal text-sm leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer "
+							className="font-normal leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer "
 						>
 							{text ? text : "Home"}
 						</p>
@@ -159,7 +196,7 @@ const Navbar = ({ onChange }) => {
 						id="list"
 						className={`${
 							dropDown ? "hidden" : "block"
-						} font-normal text-base leading-4 absolute top-2  w-full rounded shadow-md`}
+						} font-normal leading-4 absolute top-2  w-full rounded shadow-md`}
 					>
 						{menu
 							.filter((filter) => filter.isSelectect === false)
@@ -167,7 +204,7 @@ const Navbar = ({ onChange }) => {
 								return (
 									<li
 										onClick={() => setSelectedText(e.navigation)}
-										className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+										className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer leading-3 font-normal"
 									>
 										<Link
 											to={

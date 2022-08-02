@@ -6,7 +6,8 @@ module.exports = {
 				quicksand: ["Quicksand", "cursive"],
 			},
 			spacing: {
-				navbar: "56px",
+				navbar: "80px",
+				header: "60px",
 			},
 			colors: {
 				primary: "#776347",
@@ -19,6 +20,11 @@ module.exports = {
 				triadic1: "#477763",
 				links: "#1d49d8",
 				button: "#104c91",
+			},
+			backgroundSize: {
+				auto: "100%",
+				cover: "cover",
+				contain: "150%",
 			},
 		},
 		plugins: [require("flowbite/plugin")],

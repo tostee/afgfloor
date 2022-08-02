@@ -68,7 +68,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 		<form ref={form} className="space-y-6 z-50" onSubmit={handleSubmit}>
 			<div>
 				<label
-					for="name"
+					htmlFor="name"
 					className="block mb-1 text-sm font-medium text-primary"
 				>
 					Your Name
@@ -78,7 +78,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 					id="user_name"
 					classname=""
 					placeholder="Name"
-					required="true"
+					required={true}
 					value={iname}
 					onText={(e) => {
 						handleName(e);
@@ -87,7 +87,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 			</div>
 			<div>
 				<label
-					for="name"
+					htmlFor="name"
 					className="block mb-1 text-sm font-medium text-primary"
 				>
 					Phone Number
@@ -97,7 +97,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 					id="user_phone"
 					classname=""
 					placeholder="Phone number"
-					required="true"
+					required={true}
 					value={iphone}
 					onText={(e) => {
 						handlePhone(e);
@@ -106,7 +106,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 			</div>
 			<div>
 				<label
-					for="email"
+					htmlFor="email"
 					className="block mb-1 text-sm font-medium text-primary"
 				>
 					Your email
@@ -116,7 +116,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 					id="user_email"
 					classname=""
 					placeholder="name@company.com"
-					required="true"
+					required={true}
 					value={imail}
 					onText={(e) => {
 						handleMail(e);
@@ -126,7 +126,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 
 			<div>
 				<label
-					for="email"
+					htmlFor="email"
 					className="block mb-1 text-sm font-medium text-primary "
 				>
 					How can we help you?

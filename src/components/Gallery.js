@@ -133,7 +133,7 @@ export default function Gallery() {
 							{_IMAGES.map((e, i) => {
 								return (
 									<Slide className="carousel__inner-slideLarge" index={i}>
-										<div className="gallery-cell w-full h-full">
+										<div key={i} className="gallery-cell w-full h-full">
 											<div className="relative w-full h-full lg:block hidden">
 												<img
 													src={e.original}

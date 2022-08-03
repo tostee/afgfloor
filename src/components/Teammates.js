@@ -124,8 +124,8 @@ const Teammates = () => {
 	};
 	return (
 		<div className="w-full bg-white px-4 py-20 flex justify-center">
-			<div className="w-full max-w-[1024px] flex flex-col gap-6">
-				<div className="w-full max-w-[1024px] flex gap-4 container flex-wrap justify-between items-center mx-auto">
+			<div className="w-full max-w-screen-xl flex flex-col gap-6">
+				<div className="w-full flex gap-4 container flex-wrap justify-between items-center mx-auto">
 					<div>
 						<h1 className="lg:text-6xl text-3xl text-center text-secundary font-extrabold pb-6 mx-auto">
 							The Talented People Behind the Scenes of the Organization

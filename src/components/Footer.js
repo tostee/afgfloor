@@ -15,7 +15,7 @@ const Footer = (props) => {
 	};
 	return (
 		<footer className="flex justify-betweenp-4 sm:p-6 bg-primarylight">
-			<div className="w-full max-w-[1024px] flex gap-4 container flex-wrap justify-between items-center mx-auto sm:flex sm:items-center sm:justify-between">
+			<div className="w-full max-w-screen-xl flex gap-4 container flex-wrap justify-between items-center mx-auto sm:flex sm:items-center sm:justify-between">
 				<div>
 					<span className="text-sm sm:text-center text-primarydark">
 						© 2022 <span>Tostee™</span>. All Rights Reserved.

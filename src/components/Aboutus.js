@@ -1,17 +1,17 @@
 const About = () => {
 	return (
-		<div className="2xl:mx-auto md:py-12 md:px-6 py-navbar px-4 bg-white w-full mt-navbar ">
-			<div className="max-w-[1024px] mx-auto">
+		<div className="md:py-12 md:px-6 py-navbar px-4 bg-white w-full mt-navbar ">
+			<div className="max-w-screen-xl mx-auto">
 				<div className="flex flex-col lg:flex-row justify-between gap-8">
 					<div className="w-full lg:w-5/12 flex flex-col justify-center">
-						<h1 className="text-5xl lg:text-7xl font-bold leading-9 text-primary pb-4">
+						<h1 className="text-4xl lg:text-6xl font-bold leading-9 text-secundary pb-4">
 							About Us
 						</h1>
-						<p className="font-normal text-xl leading-6 text-primary ">
-							By far our main specialty in the flooring business, our team can
+						<p className="font-normal text-xl leading-6 text-secundary ">
+							By far our main specialty is the flooring business, our team can
 							amaze you with a state of the art installation job. From Laminate
-							to Hard Wood Flooring, or Vinyl to Exotics, Face of Wood
-							Flooring’s installation team will render a perfect job for you!
+							to Hard Wood Flooring, or Vinyl to Exotics, AFGFloor Flooring’s
+							installation team will render a perfect job for you!
 						</p>
 					</div>
 					<div className="w-full lg:w-8/12 ">
@@ -21,10 +21,10 @@ const About = () => {
 
 				<div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
 					<div className="w-full lg:w-5/12 flex flex-col justify-center">
-						<h1 className="text-5xl lg:text-7xl font-bold leading-9 text-primary pb-4">
+						<h1 className="text-4xl lg:text-6xl font-bold leading-9 text-secundary pb-4">
 							Our Story
 						</h1>
-						<p className="font-normal text-xl leading-6 text-primary ">
+						<p className="font-normal text-xl leading-6 text-secundary ">
 							It is a long established fact that a reader will be distracted by
 							the readable content of a page when looking at its layout. The
 							point of using Lorem Ipsum.In the first place we have granted to
@@ -47,7 +47,7 @@ const About = () => {
 									src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
 									alt="Alexa featured Img"
 								/>
-								<p className="font-medium text-xl leading-5 text-primary mt-4">
+								<p className="font-medium text-xl leading-5 text-secundary mt-4">
 									Alexa
 								</p>
 							</div>
@@ -62,7 +62,7 @@ const About = () => {
 									src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
 									alt="Olivia featured Img"
 								/>
-								<p className="font-medium text-xl leading-5 text-primary mt-4">
+								<p className="font-medium text-xl leading-5 text-secundary mt-4">
 									Olivia
 								</p>
 							</div>
@@ -77,7 +77,7 @@ const About = () => {
 									src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
 									alt="Liam featued Img"
 								/>
-								<p className="font-medium text-xl leading-5 text-primary mt-4">
+								<p className="font-medium text-xl leading-5 text-secundary mt-4">
 									Liam
 								</p>
 							</div>
@@ -92,7 +92,7 @@ const About = () => {
 									src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
 									alt="Elijah featured img"
 								/>
-								<p className="font-medium text-xl leading-5 text-primary mt-4">
+								<p className="font-medium text-xl leading-5 text-secundary mt-4">
 									Elijah
 								</p>
 							</div>

@@ -3,7 +3,7 @@ import React from "react";
 const Testimonials = () => {
 	return (
 		<div className="w-full bg-slate-200 px-4 py-20 flex justify-center">
-			<div className="w-full max-w-[1024px] flex flex-col gap-6">
+			<div className="w-full max-w-screen-xl flex flex-col gap-6">
 				<h1 className="xl:text-6xl text-3xl text-center text-secundary font-extrabold">
 					What People Say About Us
 				</h1>

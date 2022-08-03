@@ -8,6 +8,7 @@ module.exports = {
 			spacing: {
 				navbar: "80px",
 				header: "60px",
+				withmax: "1270px",
 			},
 			colors: {
 				primary: "#776347",

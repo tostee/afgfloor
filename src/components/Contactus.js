@@ -2,7 +2,7 @@ const Contactus = () => {
 	return (
 		<>
 			<div className="flex flex-wrap bg-contain">
-				<div className="w-full max-w-[1024px] mx-auto lg:pl-12 pl-4 ">
+				<div className="max-w-screen-xl mx-auto lg:pl-12 pl-4 ">
 					<div className="pt-32 md:w-10/12 h-screen">
 						<div className="mt-4 md:mt-8">
 							<h2 className="text-xl md:text-2xl text-secundary font-semibold">

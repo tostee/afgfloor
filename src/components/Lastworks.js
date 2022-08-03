@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Lastworks = () => {
 	return (
 		<div className="lg:px-20 md:px-6 px-4 md:py-12 py-8 bg-white ">
-			<div className="lg:flex items-center justify-between w-full max-w-[1024px] flex gap-4 container flex-wrap mx-auto">
+			<div className="lg:flex items-center justify-between w-full max-w-screen-xl flex gap-4 container flex-wrap mx-auto">
 				<div className="lg:w-1/3">
 					<h1 className="text-3xl xl:text-6xl font-semibold leading-none text-secundary">
 						Indoor Interiors

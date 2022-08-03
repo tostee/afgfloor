@@ -60,7 +60,7 @@ const Navbar = ({ onChange }) => {
 
 	return (
 		<div className="bg-white rounded shadow-lg p-2 fixed w-full z-30">
-			<nav className="flex justify-between max-w-[1024px] items-center mx-auto">
+			<nav className="flex justify-between max-w-screen-xl items-center mx-auto">
 				<Link to={"/"}>
 					<div
 						className="flex items-center space-x-3 lg:pr-16 pr-6 flex-1"

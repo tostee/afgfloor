@@ -6,13 +6,15 @@ const FormInput = ({
 	required,
 	value,
 	onText,
+	autoFocus,
 }) => {
 	return (
 		<input
+			autoFocus={autoFocus}
 			type="text"
 			name={name}
 			id={id}
-			className={`border text-sm rounded-lg focus:ring-primary  block w-full p-2.5 text-primary outline-none ${classname}`}
+			className={`border text-sm md:text-base rounded-lg focus:ring-primary  block w-full p-1.5 text-secundary outline-none ${classname}`}
 			placeholder={placeholder}
 			required={required}
 			value={value}

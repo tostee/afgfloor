@@ -12,10 +12,10 @@ const ModalForm = ({ className, name, visible = false, onChange }) => {
 			<div
 				className={`${
 					visible ? "show" : "hidden"
-				} p-4 z-10 top-0 left-0 w-full h-full fixed grid place-items-center bg-black bg-opacity-60`}
+				} p-4 z-50 top-0 left-0 w-full h-full fixed grid place-items-center bg-black bg-opacity-80`}
 				id="modal"
 			>
-				<div className="w-full max-w-lg relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
+				<div className="max-w-xs md:max-w-lg h-auto relative bg-black shadow-md rounded-lg border border-gray-400">
 					<div className="relative rounded-lg shadow bg-gray-100">
 						<button
 							type="button"
@@ -36,7 +36,7 @@ const ModalForm = ({ className, name, visible = false, onChange }) => {
 								></path>
 							</svg>
 						</button>
-						<div className="py-6 px-6 lg:px-8">
+						<div className="py-6 px-6 md:px-8">
 							<h3 className="mb-4 text-xl font-medium  text-primary">
 								Get quote
 							</h3>

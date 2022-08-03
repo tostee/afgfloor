@@ -65,7 +65,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 	};
 
 	return (
-		<form ref={form} className="space-y-6 z-50" onSubmit={handleSubmit}>
+		<form ref={form} className="space-y-1 z-50 px-3" onSubmit={handleSubmit}>
 			<div>
 				<label
 					htmlFor="name"
@@ -83,6 +83,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 					onText={(e) => {
 						handleName(e);
 					}}
+					autoFocus={true}
 				/>
 			</div>
 			<div>
@@ -138,8 +139,8 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 					placeholder="I was wondering about availability and rates. I need help whith the following:"
 					className="
                         w-full
-                        py-3
-                        px-[14px]
+                        py-1
+                        px-[10px]
                         text-primary
                         border border-[f0f0f0]
                         resize-none
@@ -157,7 +158,7 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 			<div className="grid grid-cols-5">
 				<button
 					type="submit"
-					className="col-start-4 col-span-2 w-auto text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-links "
+					className="col-start-1 col-span-5 w-auto text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm md:text-base px-5 py-2.5 text-center bg-links "
 				>
 					Send Message
 				</button>

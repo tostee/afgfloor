@@ -113,7 +113,7 @@ const Navbar = ({ onChange }) => {
 					</button>
 					<a
 						href="sms:+19542748026"
-						className="ml-2  text-button rounded-full p-1 hover:text-indigo-600"
+						className="ml-2  text-analogous rounded-full p-1 hover:text-green-700"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ const Navbar = ({ onChange }) => {
 					</a>
 					<a
 						href="tel:+1-954-274-8026"
-						className="ml-2  text-button rounded-full p-1 hover:text-indigo-600"
+						className="ml-2  text-analogous rounded-full p-1 hover:text-green-700"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

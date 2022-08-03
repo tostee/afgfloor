@@ -15,7 +15,7 @@ module.exports = {
 				primarylight: "#a79073",
 				primarydark: "#4a391f",
 				secundary: "#475b77",
-				analogous: "#774b47",
+				analogous: "#009588",
 				analogous1: "#737747",
 				triadic: "#5b7747",
 				triadic1: "#477763",

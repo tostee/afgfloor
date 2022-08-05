@@ -9,7 +9,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 
 const ServiceGallery = ({images}) =>{
 return(
-    <div className="w-full bg-white px-4 py-2 flex justify-center mt-navbar">
+    <div className="w-full bg-slate-200 px-4 py-2 flex justify-center">
 			<div className="2xl:px-20 px-6 py-12 w-full lg:w-4/5">
 				{/* Carousel for Small-Sized Screen */}
 				<CarouselProvider

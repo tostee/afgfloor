@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 
 const Navbar = ({ onChange }) => {
+	const {gallery} = useParams();
 	let arr = [true, false, false, false, false];
 	const menus = [
 		{
@@ -57,6 +59,8 @@ const Navbar = ({ onChange }) => {
 		mobileSelected(txt);
 		setDropDown(true);
 	};
+
+	
 
 	return (
 		<div className="bg-white rounded shadow-lg p-2 fixed w-full z-30">

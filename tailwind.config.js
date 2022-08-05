@@ -21,6 +21,7 @@ module.exports = {
 				triadic1: "#477763",
 				links: "#1d49d8",
 				button: "#104c91",
+				logo: "#834626",
 			},
 			backgroundSize: {
 				auto: "100%",

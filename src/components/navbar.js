@@ -1,32 +1,24 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
-
+import { Link, useMatch } from "react-router-dom";
+import {
+	AboutPath,
+	ContactPath,
+	GalleryPath,
+	HomePath,
+	ServicesPath,
+} from "../utils/routes";
+import Button from "./Button";
 
 const Navbar = ({ onChange }) => {
-	const {gallery} = useParams();
 	let arr = [true, false, false, false, false];
-	const menus = [
-		{
-			navigation: "Home",
-			isSelectect: true,
-		},
-		{
-			navigation: "About",
-			isSelectect: false,
-		},
-		{
-			navigation: "Services",
-			isSelectect: false,
-		},
-		{
-			navigation: "Gallery",
-			isSelectect: false,
-		},
-		{
-			navigation: "Contact",
-			isSelectect: false,
-		},
-	];
+	const isHome = !!useMatch(HomePath);
+	const isAbout = !!useMatch(AboutPath);
+	const isServices = !!useMatch(ServicesPath);
+	const isGallery = !!useMatch(GalleryPath);
+	const isContact = !!useMatch(ContactPath);
+
+	const menus = [];
+
 	const [style, setStyle] = useState(arr);
 	const [menu, setMenu] = useState(menus);
 	const [dropDown, setDropDown] = useState(true);
@@ -60,64 +52,55 @@ const Navbar = ({ onChange }) => {
 		setDropDown(true);
 	};
 
-	
-
 	return (
 		<div className="bg-white rounded shadow-lg p-2 fixed w-full z-30">
 			<nav className="flex justify-between max-w-screen-xl items-center mx-auto">
-				<Link to={"/"}>
-					<div
-						className="flex items-center space-x-3 lg:pr-16 pr-6 flex-1"
-						onClick={() => selected(0)}
-					>
-						<img
-							className="cursor-pointer w-10 h-10"
-							src="/assets/images/logo.png"
-							alt="logo"
-						></img>
+				<div className="flex-1">
+					<Link to={"/"}>
+						<div
+							className="flex items-center space-x-3 lg:pr-16 pr-6 flex-1"
+							onClick={() => selected(0)}
+						>
+							<img
+								className="cursor-pointer w-10 h-10"
+								src="/assets/images/logo.png"
+								alt="logo"
+							></img>
 
-						<h2 className="font-bold text-3xl leading-6 text-primarydark">
-							AFGfloor
-						</h2>
-					</div>
-				</Link>
-				{/* For medium and plus sized devices */}
-				<div className="">
-					<ul className="hidden md:flex flex-auto space-x-2 z-40">
-						{menu.map((e, i) => {
-							return (
-								<li
-									onClick={() => selected(i)}
-									className={`${
-										style[i]
-											? "text-white bg-primary text-lg p-3"
-											: "text-secundary border border-white bg-gray-50 text-lg"
-									}  cursor-pointer px-4 py-3 font-normal leading-3 shadow-md rounded`}
-								>
-									<Link
-										to={
-											e.navigation.toLocaleLowerCase() === "home"
-												? "/"
-												: e.navigation.toLocaleLowerCase()
-										}
-									>
-										{e.navigation}
-									</Link>
-								</li>
-							);
-						})}
-					</ul>
+							<h2 className="font-bold text-3xl leading-6 text-primarydark">
+								AFGfloor
+							</h2>
+						</div>
+					</Link>
 				</div>
-				<div className=" flex space-x-1 justify-center items-center pl-2 flex-1">
-					<button
-						onClick={() => onChange(true)}
-						className="focus:outline-none mx-auto hover:bg-indigo-600 bg-button rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm"
-					>
-						Get Quote
-					</button>
+
+				{/* For medium and plus sized devices */}
+				<ul className="flex items-center justify-center gap-2">
+					<NavItem path={HomePath} active={isHome}>
+						Home
+					</NavItem>
+
+					<NavItem path={AboutPath} active={isAbout}>
+						About
+					</NavItem>
+
+					<NavItem path={ServicesPath} active={isServices}>
+						Services
+					</NavItem>
+
+					<NavItem path={GalleryPath} active={isGallery}>
+						Gallery
+					</NavItem>
+
+					<NavItem path={ContactPath} active={isContact}>
+						Contact
+					</NavItem>
+				</ul>
+
+				<div className="flex flex-1 items-center justify-end gap-4">
 					<a
 						href="sms:+19542748026"
-						className="ml-2  text-analogous rounded-full p-1 hover:text-green-700"
+						className="text-analogous rounded-full hover:text-green-700"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -134,9 +117,10 @@ const Navbar = ({ onChange }) => {
 							/>
 						</svg>
 					</a>
+
 					<a
 						href="tel:+1-954-274-8026"
-						className="ml-2  text-analogous rounded-full p-1 hover:text-green-700"
+						className="text-analogous rounded-full hover:text-green-700"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -153,8 +137,11 @@ const Navbar = ({ onChange }) => {
 							/>
 						</svg>
 					</a>
+
+					<Button onClick={() => onChange(true)}>Get Quote</Button>
 				</div>
 			</nav>
+
 			{/* for smaller devcies */}
 			<div className="block md:hidden w-full mt-5 z-40 ">
 				<div
@@ -207,17 +194,17 @@ const Navbar = ({ onChange }) => {
 							.map((e, i) => {
 								return (
 									<li
-										onClick={() => setSelectedText(e.navigation)}
+										onClick={() => setSelectedText(e.label)}
 										className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer leading-3 font-normal"
 									>
 										<Link
 											to={
-												e.navigation.toLocaleLowerCase() === "home"
+												e.label.toLocaleLowerCase() === "home"
 													? "/"
-													: e.navigation.toLocaleLowerCase()
+													: e.label.toLocaleLowerCase()
 											}
 										>
-											{e.navigation}
+											{e.label}
 										</Link>
 									</li>
 								);
@@ -226,6 +213,22 @@ const Navbar = ({ onChange }) => {
 				</div>
 			</div>
 		</div>
+	);
+};
+
+const NavItem = ({ children, path, active = false }) => {
+	return (
+		<Link to={path}>
+			<div
+				className={`${
+					active
+						? "text-white bg-primary text-lg"
+						: "text-secundary border border-white bg-gray-50 text-lg"
+				} cursor-pointer px-4 py-3 font-normal leading-3 shadow-md rounded`}
+			>
+				{children}
+			</div>
+		</Link>
 	);
 };
 

@@ -9,6 +9,7 @@ module.exports = {
 				navbar: "80px",
 				header: "60px",
 				withmax: "1270px",
+				mobile: "360px",
 			},
 			colors: {
 				primary: "#776347",

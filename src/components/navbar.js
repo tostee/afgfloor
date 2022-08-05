@@ -10,13 +10,18 @@ import {
 import Button from "./Button";
 
 const Navbar = ({ onChange }) => {
-	let arr = [true, false, false, false, false];
 	const isHome = !!useMatch(HomePath);
 	const isAbout = !!useMatch(AboutPath);
 	const isServices = !!useMatch(ServicesPath);
 	const isGallery = !!useMatch(GalleryPath);
 	const isContact = !!useMatch(ContactPath);
-
+	let arr = [
+		{ name: "Home", active: isHome },
+		{ name: "About", active: isAbout },
+		{ name: "Services", active: isServices },
+		{ name: "Gallery", active: isGallery },
+		{ name: "Contact", active: isContact },
+	];
 	const menus = [];
 
 	const [style, setStyle] = useState(arr);
@@ -75,7 +80,7 @@ const Navbar = ({ onChange }) => {
 				</div>
 
 				{/* For medium and plus sized devices */}
-				<ul className="flex items-center justify-center gap-2">
+				<ul className="md:flex hidden items-center justify-center gap-2">
 					<NavItem path={HomePath} active={isHome}>
 						Home
 					</NavItem>
@@ -97,7 +102,7 @@ const Navbar = ({ onChange }) => {
 					</NavItem>
 				</ul>
 
-				<div className="flex flex-1 items-center justify-end gap-4">
+				<div className="flex flex-1 items-center justify-end gap-3">
 					<a
 						href="sms:+19542748026"
 						className="text-analogous rounded-full hover:text-green-700"
@@ -124,7 +129,7 @@ const Navbar = ({ onChange }) => {
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-6 w-6"
+							className="h-6 w-6 "
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -143,44 +148,41 @@ const Navbar = ({ onChange }) => {
 			</nav>
 
 			{/* for smaller devcies */}
-			<div className="block md:hidden w-full mt-5 z-40 ">
-				<div
-					onClick={() => setDropDown(!dropDown)}
-					className="cursor-pointer px-4 py-3 text-white bg-primary rounded flex justify-between items-center w-full"
-				>
-					<div className="flex space-x-2">
-						<span
-							id="s1"
-							className={`${
-								text.length !== 0 ? "" : "hidden"
-							} font-semibold leading-3`}
+			<div className=" md:hidden bg-gray-300 mt-2 z-40 ">
+				<div className="px-4 py-3 text-gray-700 rounded flex justify-between items-end w-full">
+					<div className="flex flex-row-reverse w-full">
+						<div
+							onClick={() => setDropDown(!dropDown)}
+							className="flex border border-gray-400 py-0 px-1"
 						>
-							{""}
-						</span>
-						<p
-							id="textClicked"
-							className="font-normal leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer "
-						>
-							{text ? text : "Home"}
-						</p>
+							<p id="textClicked" className="font-normal cursor-pointer ">
+								{arr
+									.filter((e) => e.active === true)
+									.map((e) => {
+										return e.name;
+									})}
+							</p>
+							<svg
+								id="ArrowSVG"
+								className={`${
+									dropDown ? "" : "rotate-180"
+								} transform duration-100`}
+								width={24}
+								height={24}
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M6 9L12 15L18 9"
+									stroke="gray"
+									strokeWidth="1.5"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+							</svg>
+						</div>
 					</div>
-					<svg
-						id="ArrowSVG"
-						className={`${dropDown ? "" : "rotate-180"} transform duration-100`}
-						width={24}
-						height={24}
-						viewBox="0 0 24 24"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M6 9L12 15L18 9"
-							stroke="white"
-							strokeWidth="1.5"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-						/>
-					</svg>
 				</div>
 				<div className=" relative">
 					<ul
@@ -189,26 +191,45 @@ const Navbar = ({ onChange }) => {
 							dropDown ? "hidden" : "block"
 						} font-normal leading-4 absolute top-2  w-full rounded shadow-md`}
 					>
-						{menu
-							.filter((filter) => filter.isSelectect === false)
-							.map((e, i) => {
-								return (
-									<li
-										onClick={() => setSelectedText(e.label)}
-										className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer leading-3 font-normal"
-									>
-										<Link
-											to={
-												e.label.toLocaleLowerCase() === "home"
-													? "/"
-													: e.label.toLocaleLowerCase()
-											}
-										>
-											{e.label}
-										</Link>
-									</li>
-								);
-							})}
+						<NavItemMobile
+							path={HomePath}
+							active={isHome}
+							onclick={() => setDropDown(!dropDown)}
+						>
+							Home
+						</NavItemMobile>
+
+						<NavItemMobile
+							path={AboutPath}
+							active={isAbout}
+							onclick={() => setDropDown(!dropDown)}
+						>
+							About
+						</NavItemMobile>
+
+						<NavItemMobile
+							path={ServicesPath}
+							active={isServices}
+							onclick={() => setDropDown(!dropDown)}
+						>
+							Services
+						</NavItemMobile>
+
+						<NavItemMobile
+							path={GalleryPath}
+							active={isGallery}
+							onclick={() => setDropDown(!dropDown)}
+						>
+							Gallery
+						</NavItemMobile>
+
+						<NavItemMobile
+							path={ContactPath}
+							active={isContact}
+							onclick={() => setDropDown(!dropDown)}
+						>
+							Contact
+						</NavItemMobile>
 					</ul>
 				</div>
 			</div>
@@ -222,9 +243,26 @@ const NavItem = ({ children, path, active = false }) => {
 			<div
 				className={`${
 					active
+						? "text-primarydark text-lg font-bold"
+						: "text-secundary text-lg hover:font-extralight"
+				} cursor-pointer px-4 `}
+			>
+				{children}
+			</div>
+		</Link>
+	);
+};
+
+const NavItemMobile = ({ children, path, active = false, onclick }) => {
+	return (
+		<Link to={path}>
+			<div
+				onClick={onclick}
+				className={`${
+					active
 						? "text-white bg-primary text-lg"
-						: "text-secundary border border-white bg-gray-50 text-lg"
-				} cursor-pointer px-4 py-3 font-normal leading-3 shadow-md rounded`}
+						: "text-secundary border border-white bg-gray-50 text-lg hover:bg-gray-100"
+				} px-4 py-3  duration-100 cursor-pointer leading-3 font-normal`}
 			>
 				{children}
 			</div>

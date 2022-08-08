@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Home from "./components/Home";
 import ModalForm from "./components/ModalForm";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import Service from "./components/Service";
 import Services from "./components/Services";
 import "./index.css";
@@ -18,8 +18,10 @@ import {
 	ServicesDetailsPath,
 	ServicesPath,
 } from "./utils/routes";
+
 const App = () => {
 	const [showModal, setShowModal] = useState(false);
+
 	return (
 		<BrowserRouter>
 			<ModalForm

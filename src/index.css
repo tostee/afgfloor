@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Quicksand";
-    src: url("../public/fonts/Quicksand.ttf");
-  }
+	font-family: "Ubuntu";
+	src: url("../public/fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Quicksand";
+	src: url("../public/fonts/Quicksand.ttf");
+}

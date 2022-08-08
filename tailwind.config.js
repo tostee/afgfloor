@@ -1,13 +1,17 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/flowbite/**/*.js"],
 	theme: {
 		extend: {
+			fontFamily: {},
 			fontFamily: {
-				quicksand: ["Quicksand", "cursive"],
+				sans: ["Ubuntu", ...defaultTheme.fontFamily.sans],
+				quicksand: ["Quicksand", ...defaultTheme.fontFamily.sans],
 			},
 			spacing: {
 				navbar: "80px",
-				header: "60px",
+				header: "64px",
 				withmax: "1270px",
 				mobile: "360px",
 			},

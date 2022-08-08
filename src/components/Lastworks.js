@@ -10,9 +10,9 @@ const Lastworks = () => {
 						Indoor Interiors
 					</h1>
 					<p className="text-xl leading-6 mt-4 text-secundary">
-						Get inspired by our curated selection of luxiwood interiors. We hope
-						get inspired to have luxiwood interior yourself. You’ll find tips
-						here where you can buy a lot of cool furniture.
+						Get inspired by our selection of wood flooring jobs. We hope to be
+						inspired so that you can have the desired interior of your home. See
+						how AFGFLOOR works for a satisfied customer
 					</p>
 					<Link to="/gallery">
 						<button

@@ -10,9 +10,10 @@ const Lastworks = () => {
 						Indoor Interiors
 					</h1>
 					<p className="text-xl leading-6 mt-4 text-secundary">
-						Get inspired by our selection of wood flooring jobs. We hope to be
-						inspired so that you can have the desired interior of your home. See
-						how AFGFLOOR works for a satisfied customer
+						Get inspired by our selection of wood flooring work. We work to
+						fulfill your expectations so you can have the desired indoor design
+						for your home. Whatch as AFGFLOOR works to satisfied all of our
+						customers
 					</p>
 					<Link to="/gallery">
 						<button

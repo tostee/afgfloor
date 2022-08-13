@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "kaxel-org"
+  },
+  "targets": {
+    "kaxel-org": {
+      "hosting": {
+        "afgfloordev": [
+          "afgfloordev"
+        ]
+      }
+    }
+  }
+}

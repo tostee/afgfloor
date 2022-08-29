@@ -56,12 +56,7 @@ const Lastworks = () => {
 						<img
 							src="./assets/images/lastworks/1.png"
 							alt="apartment design"
-							className="w-full sm:block hidden"
-						/>
-						<img
-							src="./assets/images/lastworks/2.png"
-							alt="apartment design"
-							className="sm:hidden block w-full"
+							className="w-full"
 						/>
 					</div>
 					<div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:gap-8 gap-6 lg:mt-8 md:mt-6 mt-4">

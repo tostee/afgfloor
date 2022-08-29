@@ -123,7 +123,7 @@ const Drawer = ({ open = false, onClose, children }) => {
 		<div
 			ref={ref}
 			onClick={(e) => {
-				if (e.target == ref.current) onClose?.();
+				if (e.target === ref.current) onClose?.();
 			}}
 			className="flex justify-end fixed bg-opacity-60 w-full h-full z-50 bg-black"
 		>

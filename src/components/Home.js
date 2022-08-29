@@ -1,10 +1,8 @@
-import Lastworks from "./Lastworks";
-import Testimonials from "./Testimonials";
-import MyComponent from "./map.component";
-import Notfound from "./Notfound";
 import Header from "./Header";
-import Teammates from "./Teammates";
+import Lastworks from "./Lastworks";
 import MapComponent from "./map.component";
+import Teammates from "./Teammates";
+import Testimonials from "./Testimonials";
 
 const Home = ({ className, onChange }) => {
 	return (

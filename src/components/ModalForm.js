@@ -1,12 +1,14 @@
+import React from "react";
 import QuoteForm from "./QuoteForm";
-import React, { useState } from "react";
-const ModalForm = ({ className, name, visible = false, onChange }) => {
+const ModalForm = ({ visible = false, onChange }) => {
 	function modalHandler(toogle) {
 		onChange(toogle);
 	}
-	const clearForm = (e) => {};
 
-	const onComplete = () => {};
+	const clearForm = () => {};
+
+	// TODO: const onComplete = () => {};
+
 	return (
 		<div>
 			<div

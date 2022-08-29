@@ -1,6 +1,6 @@
-import FormInput from "./FormInput";
-import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import FormInput from "./FormInput";
 
 const QuoteForm = ({ onComplete, onClose, modalState }) => {
 	const [iname, setIname] = useState("");
@@ -25,15 +25,18 @@ const QuoteForm = ({ onComplete, onClose, modalState }) => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const sendForm = {
-			to_name: "AFGFLOOR",
-			message: idescription,
-			reply_to: imail,
-			from_phone: iphone,
-			email: imail,
-			from_name: iname,
-		};
-		console.log(form.current);
+
+		/// TODO: not implemented yet
+		// const sendForm = {
+		// 	to_name: "AFGFLOOR",
+		// 	message: idescription,
+		// 	reply_to: imail,
+		// 	from_phone: iphone,
+		// 	email: imail,
+		// 	from_name: iname,
+		// };
+		// console.log(form.current);
+
 		emailjs
 			.sendForm(
 				"service_5owu39c",

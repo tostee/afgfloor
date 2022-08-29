@@ -42,7 +42,7 @@ const Teammates = () => {
 		},
 	];
 
-	const TeamCard = ({ key, user }) => {
+	const TeamCard = ({ user }) => {
 		return (
 			<div className="flex flex-col items-center">
 				<div className="h-32 w-32 p-1 -mb-16 bg-gray-100 rounded-full relative">
@@ -61,12 +61,18 @@ const Teammates = () => {
 						{user.info}
 					</p>
 					<div className="w-full flex justify-center pt-5 pb-5">
+						{/* TODO: remove lint rule when href are valid */}
+						{/* eslint-disable-next-line */}
 						<a href="#" className="mx-5">
 							<div></div>
 						</a>
+
+						{/* eslint-disable-next-line */}
 						<a href="#" className="mx-5">
 							<div></div>
 						</a>
+
+						{/* eslint-disable-next-line */}
 						<a href="#" className="mx-5">
 							<div></div>
 						</a>
@@ -75,6 +81,7 @@ const Teammates = () => {
 			</div>
 		);
 	};
+
 	return (
 		<div className="w-full bg-white px-4 py-20 flex justify-center">
 			<div className="w-full max-w-screen-xl flex flex-col gap-6">

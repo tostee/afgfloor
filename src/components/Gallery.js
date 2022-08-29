@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { _IMAGES } from "../data/data";
 import {
-	CarouselProvider,
-	Slider,
-	Slide,
 	ButtonBack,
 	ButtonNext,
+	CarouselProvider,
+	Slide,
+	Slider,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import React from "react";
+import { _IMAGES } from "../data/data";
 
 export default function Gallery() {
 	return (

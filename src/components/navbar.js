@@ -100,7 +100,7 @@ const NavItems = ({ onSelect }) => {
 	);
 };
 
-const NavItem = ({ children, path, active = false, onSelect }) => {
+const NavItem = ({ children, path, active = false }, onSelect) => {
 	return (
 		<Link to={path}>
 			<span

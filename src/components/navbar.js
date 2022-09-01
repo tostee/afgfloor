@@ -62,13 +62,13 @@ const Navbar = ({ onChange }) => {
 			</div>
 
 			<Drawer open={open} onClose={() => setOpen(false)}>
-				<NavItems />
+				<NavItems onSelect={() => setOpen(false)} />
 			</Drawer>
 		</>
 	);
 };
 
-const NavItems = () => {
+const NavItems = ({ onSelect }) => {
 	const isHome = !!useMatch(HomePath);
 	const isAbout = !!useMatch(AboutPath);
 	const isServices = !!useMatch(ServicesPath);
@@ -77,36 +77,37 @@ const NavItems = () => {
 
 	return (
 		<ul className="flex flex-col lg:flex-row items-center justify-center gap-8">
-			<NavItem path={HomePath} active={isHome}>
+			<NavItem path={HomePath} active={isHome} onSelect={onSelect}>
 				Home
 			</NavItem>
 
-			<NavItem path={AboutPath} active={isAbout}>
+			<NavItem path={AboutPath} active={isAbout} onSelect={onSelect}>
 				About
 			</NavItem>
 
-			<NavItem path={ServicesPath} active={isServices}>
+			<NavItem path={ServicesPath} active={isServices} onSelect={onSelect}>
 				Services
 			</NavItem>
 
-			<NavItem path={GalleryPath} active={isGallery}>
+			<NavItem path={GalleryPath} active={isGallery} onSelect={onSelect}>
 				Gallery
 			</NavItem>
 
-			<NavItem path={ContactPath} active={isContact}>
+			<NavItem path={ContactPath} active={isContact} onSelect={onSelect}>
 				Contact
 			</NavItem>
 		</ul>
 	);
 };
 
-const NavItem = ({ children, path, active = false }) => {
+const NavItem = ({ children, path, active = false, onSelect }) => {
 	return (
 		<Link to={path}>
 			<span
 				className={`${
 					active ? "text-primary" : "text-gray-500"
 				} hover:text-primary text-lg uppercase font-bold tracking-wide`}
+				onClick={onSelect}
 			>
 				{children}
 			</span>

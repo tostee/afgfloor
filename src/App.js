@@ -9,6 +9,7 @@ import ModalForm from "./components/ModalForm";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
 import Services from "./components/Services";
+import Notfound from "./components/Notfound";
 import "./index.css";
 import {
 	AboutPath,
@@ -44,6 +45,7 @@ const App = () => {
 							path={ServicesDetailsPath(":serviceId")}
 							element={<Service />}
 						/>
+						{/*<Route path="*" element={<Notfound />}></Route>*/}
 					</Routes>
 				</div>
 				<Footer />

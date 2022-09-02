@@ -100,14 +100,14 @@ const NavItems = ({ onSelect }) => {
 	);
 };
 
-const NavItem = ({ children, path, active = false }, onSelect) => {
+const NavItem = ({ children, path, active = false, onSelect }) => {
 	return (
 		<Link to={path}>
 			<span
 				className={`${
 					active ? "text-primary" : "text-gray-500"
 				} hover:text-primary text-lg uppercase font-bold tracking-wide`}
-				onClick={onSelect}
+				onClick={() => onSelect?.()}
 			>
 				{children}
 			</span>

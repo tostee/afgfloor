@@ -1,6 +1,6 @@
 import React from "react";
-import { services } from "../data/data";
 import { Link } from "react-router-dom";
+import { services } from "../data/data";
 const Services = () => {
 	return (
 		<div className="md:px-6 px-4 py-navbar bg-white">
@@ -8,7 +8,7 @@ const Services = () => {
 				<div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-6 items-center">
 					{services.map((e, i) => {
 						return (
-							<div className="relative flex flex-col">
+							<div key={i} className="relative flex flex-col">
 								<img src={e.preview} alt="works" className="w-full" />
 								<img
 									src={e.preview}

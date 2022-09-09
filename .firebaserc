@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "kaxel-org"
+    "default": "tostee-dev"
   },
   "targets": {
-    "kaxel-org": {
+    "tostee-dev": {
       "hosting": {
-        "afgfloordev": [
-          "afgfloordev"
+        "afgfloor": [
+          "afgfloor"
         ]
       }
     }

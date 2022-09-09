@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "afgfloordev",
+    "target": "afgfloor",
     "public": "build",
     "ignore": [
       "firebase.json",

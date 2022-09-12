@@ -5,8 +5,8 @@ const Button = ({ children, onClick }) => {
 		<button
 			type="button"
 			onClick={onClick}
-			className="whitespace-nowrap outline-none uppercase px-6 py-2
-			bg-primary rounded text-white tracking-wider font-bold"
+			className="whitespace-nowrap outline-none uppercase px-6 py-2 my-6
+			bg-button rounded text-white tracking-wider font-bold"
 		>
 			{children}
 		</button>

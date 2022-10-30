@@ -1,54 +1,36 @@
 {
-  "name": "afgfloor",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emailjs/browser": "^3.6.2",
-    "@react-google-maps/api": "^2.10.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.0.1",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^0.27.2",
-    "emailjs": "^4.0.0",
-    "emailjs-com": "^3.2.0",
-    "flowbite": "^1.4.5",
-    "pure-react-carousel": "^1.28.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-icons": "^4.3.1",
-    "react-image-gallery": "^1.2.8",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "firebase deploy --only hosting:afgfloor"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
-  }
+	"name": "afgfloor-next",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"image:build": "docker build -t gcr.io/kaxel-org/afgfloor:$VERSION .",
+		"image:push": "docker push gcr.io/kaxel-org/afgfloor:$VERSION",
+		"deploy": "gcloud run deploy afgfloor --image gcr.io/kaxel-org/afgfloor:$VERSION --project kaxel-org"
+	},
+	"dependencies": {
+		"@sendgrid/mail": "^7.7.0",
+		"axios": "^1.1.3",
+		"flowbite": "^1.5.3",
+		"next": "13.0.0",
+		"pure-react-carousel": "^1.30.1",
+		"react": "18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/axios": "^0.14.0",
+		"@types/node": "18.11.7",
+		"@types/react": "18.0.24",
+		"@types/react-dom": "18.0.8",
+		"autoprefixer": "^10.4.13",
+		"eslint": "8.26.0",
+		"eslint-config-next": "13.0.0",
+		"postcss": "^8.4.18",
+		"sass": "^1.55.0",
+		"tailwindcss": "^3.2.1",
+		"typescript": "4.8.4"
+	}
 }

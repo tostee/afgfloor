@@ -1,7 +1,11 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-	content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/flowbite/**/*.js"],
+	content: [
+		"./components/**/*.{js,jsx,ts,tsx}",
+		"./node_modules/flowbite/**/*.js",
+		"./pages/**/*.{js,jsx,ts,tsx}",
+	],
 	theme: {
 		extend: {
 			fontFamily: {},
@@ -9,10 +13,11 @@ module.exports = {
 				sans: ["Ubuntu", ...defaultTheme.fontFamily.sans],
 				quicksand: ["Quicksand", ...defaultTheme.fontFamily.sans],
 			},
+			maxWidth: {
+				page: "1280px",
+			},
 			spacing: {
-				navbar: "80px",
-				header: "64px",
-				withmax: "1270px",
+				navbar: "64px",
 				mobile: "360px",
 			},
 			colors: {
@@ -27,6 +32,7 @@ module.exports = {
 				links: "#1d49d8",
 				button: "#104c91",
 				logo: "#834626",
+				error: "#dc2626",
 			},
 			backgroundSize: {
 				auto: "100%",

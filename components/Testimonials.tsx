@@ -11,11 +11,7 @@ const Testimonials = () => {
 					className="w-full grid sm:grid-cols-1 md:grid-cols-3 gap-4 items-start"
 				>
 					<div role="listitem" className="bg-white shadow rounded p-4 xl:p-8">
-						<img
-							src="./assets/images/quote.png"
-							alt="Quote"
-							aria-hidden="true"
-						/>
+						<img src="/images/quote.png" alt="Quote" aria-hidden="true" />
 						<div className="pl-4 pt-4 flex items-start justify-between">
 							<div className="mr-6">
 								<p className="text-secundary md:text-xl">
@@ -30,11 +26,7 @@ const Testimonials = () => {
 						</div>
 					</div>
 					<div role="listitem" className="bg-white shadow rounded p-4 xl:p-8">
-						<img
-							src="./assets/images/quote.png"
-							alt="Quote"
-							aria-hidden="true"
-						/>
+						<img src="/images/quote.png" alt="Quote" aria-hidden="true" />
 						<div className="pl-4 pt-4 flex items-start justify-between">
 							<div className="mr-6">
 								<p className="text-secundary md:text-xl">
@@ -54,11 +46,7 @@ const Testimonials = () => {
 						</div>
 					</div>
 					<div role="listitem" className="bg-white shadow rounded p-4 xl:p-8">
-						<img
-							src="./assets/images/quote.png"
-							alt="Quote"
-							aria-hidden="true"
-						/>
+						<img src="/images/quote.png" alt="Quote" aria-hidden="true" />
 						<div className="pl-4 pt-4 flex items-start justify-between">
 							<div className="mr-6">
 								<p className="text-secundary md:text-xl">

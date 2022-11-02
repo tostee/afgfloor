@@ -1,87 +1,53 @@
-const Teammates = () => {
-	const teams = [
-		{
-			key: 1,
-			imageUrl: "/assets/images/team/1.png",
-			name: "Raciel Mendoza",
-			job: "",
-			info: "",
-			github: "",
-			twitter: "",
-			instagram: "",
-		},
-		{
-			key: 2,
-			imageUrl: "/assets/images/team/2.png",
-			name: "Alejandro Filgueiras",
-			job: "",
-			info: "",
-			github: "",
-			twitter: "",
-			instagram: "",
-		},
-		{
-			key: 3,
-			imageUrl: "/assets/images/team/3.png",
-			name: "René Filgueiras",
-			job: "",
-			info: "",
-			github: "",
-			twitter: "",
-			instagram: "",
-		},
-		{
-			key: 4,
-			imageUrl: "/assets/images/team/4.png",
-			name: "Adrián Filgueiras",
-			job: "",
-			info: "",
-			github: "",
-			twitter: "",
-			instagram: "",
-		},
-	];
+import Image from "next/image";
+import img1 from "../assets/team/1.png";
+import img2 from "../assets/team/2.png";
+import img3 from "../assets/team/3.png";
+import img4 from "../assets/team/4.png";
 
-	const TeamCard = ({ user }: any) => {
-		return (
-			<div className="flex flex-col items-center">
-				<div className="h-32 w-32 p-1 -mb-16 bg-gray-100 rounded-full relative">
-					<img
-						src={user.imageUrl}
-						alt="omage"
-						className="rounded-full object-cover h-full w-full shadow-md"
-					/>
-				</div>
-				<div className="rounded overflow-hidden shadow-md bg-gray-100 pt-16 px-6 w-full flex flex-col items-center">
-					<div className=" text-secundary font-bold text-3xl text-center pb-1">
-						{user.name}
-					</div>
-					<p className="text-secundary text-xl text-center">{user.job}</p>
-					<p className="text-center text-secundary pt-3 font-normal">
-						{user.info}
-					</p>
-					<div className="w-full flex justify-center pt-5 pb-5">
-						{/* TODO: remove lint rule when href are valid */}
-						{/* eslint-disable-next-line */}
-						<a href="#" className="mx-5">
-							<div></div>
-						</a>
+const teams = [
+	{
+		key: 1,
+		imageUrl: img1,
+		name: "Raciel Mendoza",
+		job: "",
+		info: "",
+		github: "",
+		twitter: "",
+		instagram: "",
+	},
+	{
+		key: 2,
+		imageUrl: img2,
+		name: "Alejandro Filgueiras",
+		job: "",
+		info: "",
+		github: "",
+		twitter: "",
+		instagram: "",
+	},
+	{
+		key: 3,
+		imageUrl: img3,
+		name: "René Filgueiras",
+		job: "",
+		info: "",
+		github: "",
+		twitter: "",
+		instagram: "",
+	},
+	{
+		key: 4,
+		imageUrl: img4,
+		name: "Adrián Filgueiras",
+		job: "",
+		info: "",
+		github: "",
+		twitter: "",
+		instagram: "",
+	},
+];
 
-						{/* eslint-disable-next-line */}
-						<a href="#" className="mx-5">
-							<div></div>
-						</a>
-
-						{/* eslint-disable-next-line */}
-						<a href="#" className="mx-5">
-							<div></div>
-						</a>
-					</div>
-				</div>
-			</div>
-		);
-	};
-
+export default function Teammates() {
 	return (
 		<div className="w-full bg-white px-4 py-20 flex justify-center">
 			<div className="w-full max-w-page flex flex-col gap-6">
@@ -92,7 +58,7 @@ const Teammates = () => {
 						</h1>
 					</div>
 				</div>
-				<div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-x-6 gap-y-12">
+				<div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
 					{teams.map((t) => (
 						<TeamCard key={t.key} user={t} />
 					))}
@@ -100,5 +66,26 @@ const Teammates = () => {
 			</div>
 		</div>
 	);
+}
+
+const TeamCard = ({ user }: any) => {
+	return (
+		<div className="rounded shadow-md bg-gray-100 pt-20 pb-8 px-6 w-full flex flex-col items-center relative mt-16">
+			<Image
+				src={user.imageUrl}
+				alt={user.name}
+				width={128}
+				height={128}
+				className="w-32 h-32 rounded-full p-1 bg-gray-100 absolute top-0 left-1/2
+				-translate-x-1/2 -translate-y-1/2"
+			/>
+
+			<div className=" text-secundary font-bold text-3xl text-center pb-1">
+				{user.name}
+			</div>
+
+			<p className="text-secundary text-xl text-center">{user.job}</p>
+			<p className="text-center text-secundary pt-3 font-normal">{user.info}</p>
+		</div>
+	);
 };
-export default Teammates;

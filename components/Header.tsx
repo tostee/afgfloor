@@ -2,7 +2,7 @@ const Header = ({ openModal }: any) => {
 	return (
 		<div
 			className={`h-80 md:h-[450px] bg-zinc-400 grid place-items-center overflow-hidden bg-cover bg-blend-multiply`}
-			style={{ backgroundImage: "url(/assets/images/default.jpg)" }}
+			style={{ backgroundImage: "url(/images/default.jpg)" }}
 		>
 			<div className="w-full max-w-page md:pt-navbar pt-28">
 				<div className="flex justify-start items-center h-full">

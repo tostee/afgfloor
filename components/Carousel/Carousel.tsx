@@ -1,9 +1,7 @@
 import { useRef } from "react";
 import styles from "./Carousel.module.scss";
 
-type CarouselProps = {
-	images: string[];
-};
+type CarouselProps = { images: string[] };
 
 const Carousel = ({ images }: CarouselProps) => {
 	const ref = useRef<HTMLDivElement>(null);
@@ -16,18 +14,22 @@ const Carousel = ({ images }: CarouselProps) => {
 
 	const prev = () => {
 		const { width } = ref.current!.getBoundingClientRect();
-		ref.current?.scrollTo({
-			left: ref.current.scrollLeft - width,
-			behavior: "smooth",
-		});
+		if (ref.current!.scrollLeft > 0) {
+			ref.current?.scrollTo({
+				left: ref.current.scrollLeft - width,
+				behavior: "smooth",
+			});
+		}
 	};
 
 	const next = () => {
 		const { width } = ref.current!.getBoundingClientRect();
-		ref.current?.scrollTo({
-			left: ref.current.scrollLeft + width,
-			behavior: "smooth",
-		});
+		if (ref.current!.scrollLeft / width < images.length - 1) {
+			ref.current?.scrollTo({
+				left: ref.current.scrollLeft + width,
+				behavior: "smooth",
+			});
+		}
 	};
 
 	const onScroll = (e: any) => {

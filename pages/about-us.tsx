@@ -17,7 +17,7 @@ const About = () => {
 
 					<div className="flex-1 flex justify-center">
 						<img
-							src="./assets/images/aboutus/front.jpg"
+							src="/images/aboutus/front.jpg"
 							alt="Living"
 							className="max-w-sm md:max-w-full max-h-[620px] rounded-lg "
 						/>

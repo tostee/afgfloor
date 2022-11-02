@@ -1,11 +1,15 @@
+import Image from "next/image";
 import Link from "next/link";
+import img1 from "../assets/lastworks/1.png";
+import img2 from "../assets/lastworks/2.png";
+import img3 from "../assets/lastworks/3.png";
 import { GalleryPath } from "../routes";
 
 const Lastworks = () => {
 	return (
-		<div className="lg:px-20 md:px-6 px-4 md:py-12 py-8 bg-white ">
-			<div className="lg:flex items-center justify-between w-full max-w-page flex gap-4 container flex-wrap mx-auto">
-				<div className="lg:w-1/3">
+		<div className="flex justify-center px-4 py-20 bg-white">
+			<div className="w-full max-w-lg lg:max-w-page flex flex-col gap-16 lg:flex-row items-center">
+				<div className="flex-1">
 					<h1 className="text-3xl xl:text-6xl font-semibold leading-none text-secundary">
 						Indoor Interiors
 					</h1>
@@ -15,6 +19,7 @@ const Lastworks = () => {
 						for your home. Whatch as AFGFLOOR works to satisfied all of our
 						customers
 					</p>
+
 					<Link href={GalleryPath}>
 						<button
 							aria-label="view catalogue"
@@ -51,24 +56,35 @@ const Lastworks = () => {
 						</button>
 					</Link>
 				</div>
-				<div className="lg:w-7/12 lg:mt-0 mt-8">
-					<div className="w-full h-full bg-red-200">
-						<img
-							src="./assets/images/lastworks/1.png"
-							alt="apartment design"
-							className="w-full"
+
+				<div className="flex-1 grid gap-6 lg:grid-cols-2 w-full">
+					<div className="lg:col-span-2 w-full h-60 relative">
+						<Image
+							src={img1}
+							alt="Apartment Design"
+							fill
+							sizes="720px"
+							className="rounded-lg object-cover"
 						/>
 					</div>
-					<div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:gap-8 gap-6 lg:mt-8 md:mt-6 mt-4">
-						<img
-							src="./assets/images/lastworks/3.png"
-							className="w-full"
-							alt="kitchen"
+
+					<div className="w-full h-60 relative">
+						<Image
+							src={img2}
+							alt="Kitchen"
+							fill
+							sizes="720px"
+							className="rounded-lg object-cover"
 						/>
-						<img
-							src="./assets/images/lastworks/4.png"
-							className="w-full"
-							alt="sitting room"
+					</div>
+
+					<div className="w-full h-60 relative">
+						<Image
+							src={img3}
+							alt="Sitting Room"
+							fill
+							sizes="720px"
+							className="rounded-lg object-cover"
 						/>
 					</div>
 				</div>

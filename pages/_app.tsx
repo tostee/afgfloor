@@ -5,20 +5,30 @@ import Footer from "../components/Footer";
 import ModalForm from "../components/ModalForm";
 import Navbar from "../components/Navbar";
 import "../styles/globals.scss";
+import { NextSeo } from "next-seo";
+
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [visible, setVisible] = useState(false);
 
 	return (
 		<>
-			<Head>
-				<meta charSet="utf-8" />
-				<meta name="theme-color" content="#000000" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="description" content="Your comfort is our priority" />
-
-				<title>AFG Floor INC</title>
-			</Head>
+	<NextSeo
+      title="AFGFLOOR"
+	  
+      description="By far our main specialty is the flooring business."
+	  robotsProps={{
+        nosnippet: true,
+        notranslate: true,
+        noimageindex: true,
+        noarchive: true,
+        maxSnippet: -1,
+        maxImagePreview: 'none',
+        maxVideoPreview: -1,
+      }}
+      
+/>
+	
 
 			<ModalForm visible={visible} onChange={(toggle) => setVisible(toggle)} />
 

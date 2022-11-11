@@ -3,10 +3,30 @@ import {
 	contactEmail,
 	contactPhone,
 	contactPhoneDisplay,
+	urlContact,
 } from "../constants";
+import { NextSeo } from "next-seo";
 
 const Contactus = () => {
 	return (
+		<>
+		<NextSeo
+      openGraph={{
+        type: 'website',
+        url: urlContact,
+        title: 'Afgfloor Contact Us',
+        description: 'Get in touch with our team.',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+          },
+          
+        ],
+      }}
+    />
 		<div className="flex justify-center pt-navbar w-full px-4">
 			<div className="max-w-page flex flex-col gap-8 my-8">
 				<ContactField label="Address" field={contactAddress} />
@@ -29,6 +49,7 @@ const Contactus = () => {
 				/>
 			</div>
 		</div>
+		</>
 	);
 };
 

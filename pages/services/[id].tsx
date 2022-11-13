@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import ServiceGallery from "../../components/ServiceGallery";
 import { services } from "../../images";
+import { NextSeo } from "next-seo";
+
 
 export default function Service() {
 	const router = useRouter();
@@ -11,6 +13,29 @@ export default function Service() {
 
 	return (
 		<>
+		<NextSeo
+      title={service.name}
+	  
+      description={service.description}
+
+	  openGraph={{
+        type: 'website',
+        url: '',
+        title: service.name,
+        description: service.description,
+        images: [
+          {
+            url: service.preview,
+            width: 800,
+            height: 600,
+            alt: service.name + ' Image',
+          },
+          
+        ],
+      }}
+	  
+      
+/>
 			<div className="w-full pt-navbar flex justify-center px-4">
 				<div className="w-full flex flex-col py-12 items-center gap-4 lg:gap-10 max-w-lg lg:max-w-page">
 					<h1 className="text-3xl font-semibold text-center">{service.name}</h1>

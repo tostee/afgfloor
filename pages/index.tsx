@@ -5,10 +5,13 @@ import Teammates from "../components/Teammates";
 import Testimonials from "../components/Testimonials";
 import { NextSeo } from "next-seo";
 import { urlHome } from "../constants";
+import Head from "next/head";
 const Home = ({ openModal }: any) => {
 	return (
 		<>
+		
 		<NextSeo
+		
       openGraph={{
         type: 'website',
         url: urlHome,
@@ -16,10 +19,10 @@ const Home = ({ openModal }: any) => {
         description: 'Your comfort is our priority.',
         images: [
           {
-            url: 'https://www.example.ie/og-image.jpg',
+            url: '/images/home.jpg',
             width: 800,
             height: 600,
-            alt: 'Og Image Alt',
+            alt: 'Indoor Image',
           },
           
         ],

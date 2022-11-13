@@ -7,6 +7,8 @@ export default function Gallery() {
 	return (
 	<>
 	<NextSeo
+  title="GALLERY"
+  description="Some pics of the company's work."
       openGraph={{
         type: 'website',
         url: urlGallery,

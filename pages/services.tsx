@@ -8,11 +8,13 @@ const Services = () => {
 		
 		<>
 		<NextSeo
+		title="SERVICES"
+		description="Services provided by our company."
       openGraph={{
         type: 'website',
         url: urlServices,
         title: 'Afgfloor Services',
-        description: 'Services provided by our company.',
+        description: 'Choose a service, AFGFLOOR is pleased to work for you.',
         images: [
           {
             url: 'https://www.example.ie/og-image.jpg',

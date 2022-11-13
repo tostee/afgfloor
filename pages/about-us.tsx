@@ -5,6 +5,8 @@ const About = () => {
 	return (
 		<>
 		<NextSeo
+		title="ABOUT"
+		description="By far our main specialty is the flooring business."
       openGraph={{
         type: 'website',
         url: urlAboutus,

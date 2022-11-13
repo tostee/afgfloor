@@ -4,8 +4,10 @@ import {
 	contactPhone,
 	contactPhoneDisplay,
 	urlContact,
+	urlHome
 } from "../constants";
 import { NextSeo } from "next-seo";
+import { CorporateContactJsonLd } from 'next-seo';
 
 const Contactus = () => {
 	return (
@@ -29,6 +31,20 @@ const Contactus = () => {
           
         ],
       }}
+    />
+	<CorporateContactJsonLd
+      url={urlHome}
+      logo="/images/home.jpg"
+      contactPoint={[
+        {
+          telephone: '+1-954-274-8026',
+          contactType: 'customer service',
+          email: 'afgfloorexpertsinc@gmail.com',
+          areaServed: 'US',
+          availableLanguage: ['English', 'Spanish'],
+        },
+        
+      ]}
     />
 		<div className="flex justify-center pt-navbar w-full px-4">
 			<div className="max-w-page flex flex-col gap-8 my-8">

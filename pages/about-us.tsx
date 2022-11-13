@@ -14,10 +14,10 @@ const About = () => {
         description: 'By far our main specialty is the flooring business, our team can amaze you with a state of the art installation job.',
         images: [
           {
-            url: 'https://www.example.ie/og-image.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
+            url: '/images/aboutus/front.jpg',
+            width: 640,
+            height: 480,
+            alt: 'About Image',
           },
           
         ],

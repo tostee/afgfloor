@@ -1,31 +1,12 @@
 import Link from "next/link";
 import { services } from "../images";
 import { ServicesDetailsPath } from "../routes";
-import { NextSeo } from "next-seo";
-import { urlServices } from "../constants";
+import { Seoservices } from "../SEO/appSEO";
 const Services = () => {
 	return (
 		
 		<>
-		<NextSeo
-		title="SERVICES"
-		description="Services provided by our company."
-      openGraph={{
-        type: 'website',
-        url: urlServices,
-        title: 'Afgfloor Services',
-        description: 'Choose a service, AFGFLOOR is pleased to work for you.',
-        images: [
-          {
-            url: 'https://www.example.ie/og-image.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-          },
-          
-        ],
-      }}
-    />
+		<Seoservices/>
 		<div className="flex justify-center px-4 w-full py-navbar bg-white">
 		<div className="grid lg:grid-cols-3 gap-6 w-full max-w-lg lg:max-w-page py-10">
 			{services.map((e, i) => {

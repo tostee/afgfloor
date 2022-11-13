@@ -1,28 +1,9 @@
-import { NextSeo } from "next-seo";
-import { urlAboutus} from "../constants";
+import { Seoabout } from "../SEO/appSEO";
 
 const About = () => {
 	return (
 		<>
-		<NextSeo
-		title="ABOUT"
-		description="By far our main specialty is the flooring business."
-      openGraph={{
-        type: 'website',
-        url: urlAboutus,
-        title: 'Afgfloor About Us',
-        description: 'By far our main specialty is the flooring business, our team can amaze you with a state of the art installation job.',
-        images: [
-          {
-            url: '/images/aboutus/front.jpg',
-            width: 640,
-            height: 480,
-            alt: 'About Image',
-          },
-          
-        ],
-      }}
-    />
+		<Seoabout/>
 		<div className="md:py-12 md:px-6 py-navbar px-4 bg-white w-full flex justify-center mt-navbar">
 			<div className="w-full max-w-page">
 				<div className="flex flex-col md:flex-row items-center gap-8">

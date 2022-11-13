@@ -3,49 +3,14 @@ import {
 	contactEmail,
 	contactPhone,
 	contactPhoneDisplay,
-	urlContact,
-	urlHome
+	
 } from "../constants";
-import { NextSeo } from "next-seo";
-import { CorporateContactJsonLd } from 'next-seo';
+import { Seocontact } from "../SEO/appSEO";
 
 const Contactus = () => {
 	return (
 		<>
-		<NextSeo
-		title="CONTACT"
-		description= 'Get in touch with our team.'
-
-      openGraph={{
-        type: 'website',
-        url: urlContact,
-        title: 'Afgfloor Contact Us',
-        description: 'Get in touch with our team.',
-        images: [
-          {
-            url: 'https://www.example.ie/og-image.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-          },
-          
-        ],
-      }}
-    />
-	<CorporateContactJsonLd
-      url={urlHome}
-      logo="/images/home.jpg"
-      contactPoint={[
-        {
-          telephone: '+1-954-274-8026',
-          contactType: 'customer service',
-          email: 'afgfloorexpertsinc@gmail.com',
-          areaServed: 'US',
-          availableLanguage: ['English', 'Spanish'],
-        },
-        
-      ]}
-    />
+		<Seocontact/>
 		<div className="flex justify-center pt-navbar w-full px-4">
 			<div className="max-w-page flex flex-col gap-8 my-8">
 				<ContactField label="Address" field={contactAddress} />

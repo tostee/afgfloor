@@ -3,31 +3,12 @@ import Lastworks from "../components/Lastworks";
 import MapComponent from "../components/MapComponent";
 import Teammates from "../components/Teammates";
 import Testimonials from "../components/Testimonials";
-import { NextSeo } from "next-seo";
-import { urlHome } from "../constants";
-import Head from "next/head";
+import { Seohome } from "../SEO/appSEO";
 const Home = ({ openModal }: any) => {
 	return (
 		<>
+		<Seohome/>
 		
-		<NextSeo
-		
-      openGraph={{
-        type: 'website',
-        url: urlHome,
-        title: 'Afgfloor Main Page',
-        description: 'Your comfort is our priority.',
-        images: [
-          {
-            url: '/images/home.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Indoor Image',
-          },
-          
-        ],
-      }}
-    />
 		<div className="grid auto-rows-auto auto">
 			<Header openModal={openModal} />
 

@@ -11,6 +11,9 @@ const Contactus = () => {
 	return (
 		<>
 		<NextSeo
+		title="CONTACT"
+		description= 'Get in touch with our team.'
+
       openGraph={{
         type: 'website',
         url: urlContact,

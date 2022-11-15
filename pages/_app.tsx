@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import ModalForm from "../components/ModalForm";

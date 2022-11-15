@@ -4,10 +4,15 @@ import { urlAboutus,
     urlGallery,
     urlHome,
     urlServices } from "../constants";
-
+import Head from "next/head";
     export const AppSeo = () =>{
         return (
             <>
+        <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+				<link rel="manifest" href="/manifest.json" />
+        </Head>
             <NextSeo
       title="AFGFLOOR"
 	  
@@ -23,7 +28,149 @@ import { urlAboutus,
       }}
       
 />
-<LocalBusinessJsonLd
+
+            </>
+        )
+    }
+
+    export const Seocontact = () =>{
+        return (
+            <>
+               <NextSeo
+		title="CONTACT"
+		description= 'Get in touch with our team.'
+
+      openGraph={{
+        type: 'website',
+        url: urlContact,
+        title: 'Afgfloor Contact Us',
+        description: 'Get in touch with our team.',
+        images: [
+          {
+            url: '/images/home.jpg',
+            width: 800,
+            height: 600,
+            alt: 'AFGFLOOR image',
+          },
+          
+        ],
+      }}
+    />
+	<CorporateContactJsonLd
+      url={urlHome}
+      logo="/images/home.jpg"
+      contactPoint={[
+        {
+          telephone: '+1-954-274-8026',
+          contactType: 'customer service',
+          email: 'afgfloorexpertsinc@gmail.com',
+          areaServed: 'US',
+          availableLanguage: ['English', 'Spanish'],
+        },
+        
+      ]}/>
+      </>      
+         
+        )
+    }
+
+    export const Seoabout = () =>{
+        return(
+            <>
+            <NextSeo
+		title="ABOUT"
+		description="By far our main specialty is the flooring business."
+      openGraph={{
+        type: 'website',
+        url: urlAboutus,
+        title: 'Afgfloor About Us',
+        description: 'By far our main specialty is the flooring business, our team can amaze you with a state of the art installation job.',
+        images: [
+          {
+            url: '/images/aboutus/front.jpg',
+            width: 640,
+            height: 480,
+            alt: 'About Image',
+          },
+          
+        ],
+      }}
+    /></>
+        )
+    }
+
+    export const Seoservices = () =>{
+        return(
+            <>
+            <NextSeo
+		title="SERVICES"
+		description="Services provided by our company."
+      openGraph={{
+        type: 'website',
+        url: urlServices,
+        title: 'Afgfloor Services',
+        description: 'Choose a service, AFGFLOOR is pleased to work for you.',
+        images: [
+          {
+            url: '/images/home.jpg',
+            width: 800,
+            height: 600,
+            alt: 'AFGFLOOR',
+          },
+          
+        ],
+      }}
+    />
+            </>
+        )
+    }
+
+    export const Seogallery = () =>{
+        return (
+            <NextSeo
+  title="GALLERY"
+  description="Some pics of the company's work."
+      openGraph={{
+        type: 'website',
+        url: urlGallery,
+        title: 'Afgfloor Gallery',
+        description: "Some pics of the company's work.",
+        images: [
+          {
+            url: '/images/gallery/10.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Indoor',
+          },
+          
+        ],
+      }}
+    />
+        )
+    }
+
+    export const Seohome = () => {
+        return (
+            <>
+            <NextSeo
+		
+        openGraph={{
+          type: 'website',
+          url: urlHome,
+          title: 'Afgfloor Main Page',
+          description: 'Your comfort is our priority.',
+          images: [
+            {
+              url: '/images/home.jpg',
+              width: 800,
+              height: 600,
+              alt: 'Indoor Image',
+            },
+            
+          ],
+        }}
+      />
+      <LocalBusinessJsonLd
   type="Flooring Enterprice"
   id={urlHome}
   name="AFGFLOOR INC"
@@ -126,147 +273,6 @@ import { urlAboutus,
     target: urlServices + '/3',
   }}
 />
-            </>
-        )
-    }
-
-    export const Seocontact = () =>{
-        return (
-            <>
-               <NextSeo
-		title="CONTACT"
-		description= 'Get in touch with our team.'
-
-      openGraph={{
-        type: 'website',
-        url: urlContact,
-        title: 'Afgfloor Contact Us',
-        description: 'Get in touch with our team.',
-        images: [
-          {
-            url: 'https://www.example.ie/og-image.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-          },
-          
-        ],
-      }}
-    />
-	<CorporateContactJsonLd
-      url={urlHome}
-      logo="/images/home.jpg"
-      contactPoint={[
-        {
-          telephone: '+1-954-274-8026',
-          contactType: 'customer service',
-          email: 'afgfloorexpertsinc@gmail.com',
-          areaServed: 'US',
-          availableLanguage: ['English', 'Spanish'],
-        },
-        
-      ]}/>
-      </>      
-         
-        )
-    }
-
-    export const Seoabout = () =>{
-        return(
-            <>
-            <NextSeo
-		title="ABOUT"
-		description="By far our main specialty is the flooring business."
-      openGraph={{
-        type: 'website',
-        url: urlAboutus,
-        title: 'Afgfloor About Us',
-        description: 'By far our main specialty is the flooring business, our team can amaze you with a state of the art installation job.',
-        images: [
-          {
-            url: '/images/aboutus/front.jpg',
-            width: 640,
-            height: 480,
-            alt: 'About Image',
-          },
-          
-        ],
-      }}
-    /></>
-        )
-    }
-
-    export const Seoservices = () =>{
-        return(
-            <>
-            <NextSeo
-		title="SERVICES"
-		description="Services provided by our company."
-      openGraph={{
-        type: 'website',
-        url: urlServices,
-        title: 'Afgfloor Services',
-        description: 'Choose a service, AFGFLOOR is pleased to work for you.',
-        images: [
-          {
-            url: 'https://www.example.ie/og-image.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-          },
-          
-        ],
-      }}
-    />
-            </>
-        )
-    }
-
-    export const Seogallery = () =>{
-        return (
-            <NextSeo
-  title="GALLERY"
-  description="Some pics of the company's work."
-      openGraph={{
-        type: 'website',
-        url: urlGallery,
-        title: 'Afgfloor Gallery',
-        description: "Some pics of the company's work.",
-        images: [
-          {
-            url: 'https://www.example.ie/og-image.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-          },
-          
-        ],
-      }}
-    />
-        )
-    }
-
-    export const Seohome = () => {
-        return (
-            <>
-            <NextSeo
-		
-        openGraph={{
-          type: 'website',
-          url: urlHome,
-          title: 'Afgfloor Main Page',
-          description: 'Your comfort is our priority.',
-          images: [
-            {
-              url: '/images/home.jpg',
-              width: 800,
-              height: 600,
-              alt: 'Indoor Image',
-            },
-            
-          ],
-        }}
-      />
             </>
         )
     }

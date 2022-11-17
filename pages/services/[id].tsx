@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ServiceGallery from "../../components/ServiceGallery";
 import { services } from "../../images";
-import { Seoservice } from "../../SEO/appSEO";
+import { SeoService } from "../../SEO/appSEO";
 
 
 
@@ -14,7 +14,7 @@ export default function Service() {
 
 	return (
 		<>
-		<Seoservice service = {service}/>
+		<SeoService service = {service}/>
 
 			<div className="w-full pt-navbar flex justify-center px-4">
 				<div className="w-full flex flex-col py-12 items-center gap-4 lg:gap-10 max-w-lg lg:max-w-page">

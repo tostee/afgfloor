@@ -3,11 +3,11 @@ import Lastworks from "../components/Lastworks";
 import MapComponent from "../components/MapComponent";
 import Teammates from "../components/Teammates";
 import Testimonials from "../components/Testimonials";
-import { Seohome } from "../SEO/appSEO";
+import { SeoHome } from "../SEO/appSEO";
 const Home = ({ openModal }: any) => {
 	return (
 		<>
-		<Seohome/>
+		<SeoHome/>
 		
 		<div className="grid auto-rows-auto auto">
 			<Header openModal={openModal} />

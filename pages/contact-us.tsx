@@ -5,12 +5,12 @@ import {
 	contactPhoneDisplay,
 	
 } from "../constants";
-import { Seocontact } from "../SEO/appSEO";
+import { SeoContact } from "../SEO/appSEO";
 
 const Contactus = () => {
 	return (
 		<>
-		<Seocontact/>
+		<SeoContact/>
 		<div className="flex justify-center pt-navbar w-full px-4">
 			<div className="max-w-page flex flex-col gap-8 my-8">
 				<ContactField label="Address" field={contactAddress} />

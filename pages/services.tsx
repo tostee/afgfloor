@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { services } from "../images";
 import { ServicesDetailsPath } from "../routes";
-import { Seoservices } from "../SEO/appSEO";
+import { SeoServices } from "../SEO/appSEO";
 const Services = () => {
 	return (
 		
 		<>
-		<Seoservices/>
+		<SeoServices/>
 		<div className="flex justify-center px-4 w-full py-navbar bg-white">
 		<div className="grid lg:grid-cols-3 gap-6 w-full max-w-lg lg:max-w-page py-10">
 			{services.map((e, i) => {

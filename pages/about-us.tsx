@@ -1,9 +1,9 @@
-import { Seoabout } from "../SEO/appSEO";
+import { SeoAbout } from "../SEO/appSEO";
 
 const About = () => {
 	return (
 		<>
-		<Seoabout/>
+		<SeoAbout/>
 		<div className="md:py-12 md:px-6 py-navbar px-4 bg-white w-full flex justify-center mt-navbar">
 			<div className="w-full max-w-page">
 				<div className="flex flex-col md:flex-row items-center gap-8">
